@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #272727;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents scrollbars */
+}
+
+button {
+  width: 4vw; /* Ensure buttons are wide enough */
+  height: auto; /* Let height adjust naturally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vw; /* Add some padding for spacing */
+  border: none; /* Remove default borders */
+  background: transparent; /* Ensure no conflicting background */
+  cursor: pointer;
+}
+
+button > div {
+  width: 50%; /* Fully utilize button width */
+  height: 4vw; /* Ensure buttons have enough height to display colors */
+  
+  background-size: cover; /* Ensure the image fills the div */
+  background-position: center; /* Center the image */
+  border-radius: 1px; /* Optional: Rounded corners for aesthetics */
+}
+
+button div + div {
+  margin-top: 0.5vw;
+  text-align: center;
+  color: black;
+  font-size: 1vw; /* Adjust font size for text below colors */
+}
+
+button:hover div {
+  border: 2px solid #000;
+}
+
+button.selected > div {
+  border: 3px solid white; /* Highlight selected color */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  padding-left: 340px; /* Adjust this value based on the width of your logo */
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px;
+  /* You might want to remove or change this if you want the background image to be fully visible */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  
+  background-image: url('/3dfencept//ColorBG.jpg');
+  background-size: cover; /* Adjust this property as needed */
+  background-position: center; /* Adjust this property as needed */
+  border-radius: 10px; /* Optional: add some rounded corners */
+}
+
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.logo {
+  position: fixed; /* Keep the logo fixed in the same position relative to the viewport */
+  bottom: 2%; /* Position it slightly above the bottom edge */
+  right: 2%; /* Position it slightly away from the right edge */
+  width: 14vw; /* Scale the width proportionally with the viewport */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.color-name-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  margin-top: 10px;
+  color: black;
+}
+
+.color-name {
+  white-space: normal; /* Prevent text from wrapping */
+  overflow: visible; /* Make sure text isn't cut off */
+  text-overflow: initial;
+  font-size: 16px; /* Adjust the font size if needed */
+  padding: 0 10px; /* Add padding to avoid text touching edges */
+}
+
+.category-dropdown {
+  position: absolute;
+  top: 185px; /* Adjust based on logo size */
+  left: 10px; /* Align with the logo */
+  z-index: 1000;
+  padding: 5px;
+  font-size: 16px;
+  
+}
+
+.slat-size-dropdown, .spacer-size-dropdown {
+  position: absolute;
+  top: 225px; /* Adjust based on logo size */
+  left: 10px; /* Align with the logo */
+  z-index: 1000;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.spacer-size-dropdown {
+  top: 240px; /* Adjust this value based on the slat size dropdown position */
+}
+.slat-size-dropdown, .spacer-size-dropdown {
+  position: absolute;
+  top: 225px; /* Adjust based on logo size */
+  left: 10px; /* Align with the logo */
+  z-index: 1000;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.spacer-size-dropdown {
+  top: 265px; /* Adjust this value based on the slat size dropdown position */
+}
+
+.disclaimer-container {
+  position: absolute; /* Makes the container fixed to a specific location */
+  top: 900px;
+  bottom: 0; /* Aligns the container at the bottom of the page */
+  left: 0; /* Aligns the container to the left edge */
+  width: 100%; /* Makes the disclaimer stretch across the entire width */
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for readability */
+  color: white; /* White text color for contrast */
+  padding: 10px; /* Space inside the container */
+  text-align: center; /* Center the text horizontally */
+  font-size: 14px; /* Adjust the font size as needed */
+  z-index: 1000; /* Ensure the disclaimer stays on top of other elements */
+}
