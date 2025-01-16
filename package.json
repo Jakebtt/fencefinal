@@ -1,5 +1,5 @@
 {
-  "name": "3dfencept",
+  "name": "Alumarch-fence",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://jakebtt.github.io/3dfencept",
+ "homepage": "https://jakebtt.github.io/Alumarch-fence",
   "dependencies": {
     "@react-three/drei": "9.105.5",
     "@react-three/fiber": "8.16.2",

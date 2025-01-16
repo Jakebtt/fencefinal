@@ -192,4 +192,4 @@ export function Model({ textureUrl }) {
   )
 }
 
-useGLTF.preload('/3dfencept/modeltest.glb')
+useGLTF.preload('/Alumarch-fence/modeltest.glb')

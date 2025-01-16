@@ -7,7 +7,7 @@ const server = process.env.APP_ENV === "sandbox" ? { hmr: { clientPort: 443 } } 
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/3dfencept/', // Adjust this to your repository name
+  base: '/Alumarch-fence/', // Adjust this to your repository name
   server: server,
   resolve: {
     alias: {
