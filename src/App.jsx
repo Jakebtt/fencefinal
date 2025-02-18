@@ -47,7 +47,7 @@ import './styles.css';
 
 
 const slatSizes = ['2.5inch slat', '4inch slat', '6inch slat'];
-const spacerSizes = ['No Space', '0.25inch spacing', '0.5inch spacing', "'1inch spacing", ];
+const spacerSizes = ['No Space', '0.25inch spacing', '0.5inch spacing', "1inch spacing", ];
 
 const modelMapping = {
   '1.5inch slat': {
